@@ -4,5 +4,7 @@ debug: lichlyts.adventure.c
 	gcc -g lichlyts.adventure.c -o lichlyts.adventure.d
 	gdb lichlyts.adventure.d
 clean: 
-	ls | grep -P "^lichlyts\.rooms\.([0-9]+|d)" | xargs -d"\n" rm -rf
+	rm -rf lichlyts.rooms.*
+	rm -rf *.dSYM
+	rm lichlyts.adventure.d
 	rm lichlyts.adventure
